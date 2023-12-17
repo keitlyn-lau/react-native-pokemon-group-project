@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Button, Alert, FlatList } from 'react-native';
 import { useState, useEffect } from 'react';
-import { TextInput } from 'react-native-web';
+// import { TextInput } from 'react-native-web';
 
 export default function ListScreen() {
 
@@ -28,7 +28,7 @@ export default function ListScreen() {
 
     return (
         <View  style={styles.container}>
-            <TextInput
+            <Text
                 style={styles.searchBox}
                 onChangeText={text => setSearchTerm(text)}
                 value={searchTerm}
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     h1: {
       fontSize: 36,
       color: '#3C5BA7',
-      fontWeight: 900,
+    //   fontWeight: 900,
       margin: 20,
     },
     searchBox: {

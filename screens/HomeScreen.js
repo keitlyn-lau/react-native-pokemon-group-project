@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     h1: {
       fontSize: 48,
       color: '#FFCB05',
-      fontWeight: 900,
+    //   fontWeight: 900,
       margin: 20,
     }
   });
