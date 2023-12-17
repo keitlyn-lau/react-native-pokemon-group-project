@@ -27,9 +27,10 @@ const styles = StyleSheet.create({
       justifyContent: 'space-around',
     },
     h1: {
+      fontFamily: 'sans-serif-medium',
       fontSize: 48,
       color: '#FFCB05',
-    //   fontWeight: 900,
+      fontWeight: 'bold',
       margin: 20,
     }
   });
