@@ -50,40 +50,36 @@ export default function PokemonDetails({route}) {
 
             <Image style={styles.image} source={{uri:imageUrl}} />
             
-            <View>
-
+            <View style={styles.sections}>
                 <Text style={styles.h2}>
                     Abilities:
                 </Text>
-
-                {abilities.map((ability, index) => (
-                    <Text key={index} style={styles.ability}>
-                        {ability}
-                    </Text>
-                ))}
-
+                <View style={styles.verticalLayout}>
+                    {abilities.map((ability, index) => (
+                        <Text key={index} style={styles.ability}>
+                            {ability}
+                        </Text>
+                    ))}
+                </View>
             </View>
 
-            <View>
-                
+            <View style={styles.sections}>
                 <Text style={styles.h2}>
-                    Types:
+                    Types: 
                 </Text>
-
-                {types.map((type, index) => (
-                    <Text key={index} style={styles.type}>
-                        {type}
-                    </Text>
-                ))}
-
+                <View style={styles.verticalLayout}>
+                    {types.map((type, index) => (
+                        <Text key={index} style={styles.type}>
+                            {type}
+                        </Text>
+                    ))}
+                </View>
             </View>
 
-            <View>
-
+            <View style={styles.sections}>
                 <Text style={styles.h2}>
                     Evolutions:
                 </Text>
-
             </View>
 
         </View>
@@ -94,7 +90,7 @@ export default function PokemonDetails({route}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
+        justifyContent: 'center',
     },
     h1: {
         fontFamily: 'sans-serif-medium',
@@ -105,11 +101,19 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     h2: {
-        fontFamily: 'sans-serif-medium',
-        fontSize: 24,
+        fontWeight: 'bold',
     },
     image: {
         width: 150,
         height: 150,
+        alignSelf: 'center'
+    },
+    sections: {
+        margin: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
+    verticalLayout: {
+        flexDirection: 'column'
     }
 })
